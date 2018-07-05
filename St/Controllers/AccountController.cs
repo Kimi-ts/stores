@@ -17,7 +17,6 @@ namespace St.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        //private RoleManager<ApplicationRole> _roleManager;
 
         public AccountController()
         {
@@ -53,19 +52,6 @@ namespace St.Controllers
                 _userManager = value;
             }
         }
-
-        //public RoleManager RoleManager
-        //{
-        //    get
-        //    {
-        //        return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-
-        //    }
-        //    private set
-        //    {
-        //        _userManager = value;
-        //    }
-        //}
 
         //
         // GET: /Account/Login
@@ -166,19 +152,6 @@ namespace St.Controllers
         {
             if (ModelState.IsValid)
             {
-                //ApplicationRole role = null;
-                //if (!string.IsNullOrEmpty(model.PartnerConfirmationCode))
-                //{
-                //    if (model.PartnerConfirmationCode == "12")
-                //    {
-                //        role = await _roleManager.FindByNameAsync("ShopOwner");
-                //    }
-                //}
-                //else
-                //{
-                //    role = await _roleManager.FindByNameAsync("Client");
-                //}
-
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
