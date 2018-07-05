@@ -1,24 +1,88 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html {
+    position: relative;
+    min-height: 100%;
 }
 
-/* Set padding to keep content from hitting the edges */
+body {
+    /* footer height */
+    /* margin-bottom: 206px; */
+    margin-bottom: 250px;
+    background: url("http://www.pizza.by/skin/frontend/default/pizzabyrebrand/images/bg.jpg");
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        margin-bottom: 398px;
+    }
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    padding-top: 55px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.step-icon i {
+    font-size: 72px;
+}
+
+.text-white-70 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.text-black-40 {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+.fill-viewport {
+    min-height: 100vh;
+}
+
+.card-img {
+    height: 150px;
+    width: 100%;
+    display: block;
+}
+
+.cut-single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-hover-underline {
+    text-decoration: none !important;
 }

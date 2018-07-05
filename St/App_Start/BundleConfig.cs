@@ -18,22 +18,15 @@ namespace St
             bundles.Add(new ScriptBundle("~/bundles/vue", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"));
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include("~/Scripts/lib/jquery-validation/dist/jquery.validate.js", "~/Scripts/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"));
 
+            bundles.Add(new StyleBundle("~/Content/libStyles").Include(
+                      "~/Scripts/lib/tether/dist/css/tether.css",
+                      "~/Scripts/lib/bootstrap/dist/css/bootstrap.css",
+                      "~/Scripts/lib/font-awesome/css/font-awesome.min.css"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-            //            "~/Scripts/jquery.validate*"));
+            bundles.Add(new StyleBundle("~/Content/styles").Include(
+          "~/Content/points.css",
+          "~/Content/site.css"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
-            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-            //            "~/Scripts/modernizr-*"));
-
-            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-            //          "~/Scripts/bootstrap.js",
-            //          "~/Scripts/respond.js"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
 
             BundleTable.EnableOptimizations = true;
         }
