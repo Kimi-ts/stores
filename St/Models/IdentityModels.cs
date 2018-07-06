@@ -39,5 +39,6 @@ namespace St.Models
         public DbSet<SiteConfig> SiteConfig { get; set; }
         public DbSet<PageData> PageDataItems { get; set; }
         public DbSet<SocialNetworkItem> SocialNetworkItems { get; set; }
+        public DbSet<Partner> Partners { get; set; }
     }
 }

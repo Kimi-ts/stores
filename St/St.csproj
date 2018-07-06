@@ -239,16 +239,23 @@
     <Compile Include="Migrations\201807060944320_CreateSocialNetworkSchema.Designer.cs">
       <DependentUpon>201807060944320_CreateSocialNetworkSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807061044264_CreatePartnerSchema.cs" />
+    <Compile Include="Migrations\201807061044264_CreatePartnerSchema.Designer.cs">
+      <DependentUpon>201807061044264_CreatePartnerSchema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Custom\FooterViewModel.cs" />
     <Compile Include="Models\Custom\PageData.cs" />
+    <Compile Include="Models\Custom\Partner.cs" />
     <Compile Include="Models\Custom\SiteConfig.cs" />
     <Compile Include="Models\Custom\SocialNetworkItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IParnterManager.cs" />
     <Compile Include="Providers\ISiteConfigManager.cs" />
+    <Compile Include="Providers\PartnerManager.cs" />
     <Compile Include="Providers\SiteConfigManager.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -493,6 +500,9 @@
     <EmbeddedResource Include="Migrations\201807060944320_CreateSocialNetworkSchema.resx">
       <DependentUpon>201807060944320_CreateSocialNetworkSchema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807061044264_CreatePartnerSchema.resx">
+      <DependentUpon>201807061044264_CreatePartnerSchema.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Footer.cshtml" />
@@ -531,6 +541,9 @@
     <Content Include="Content\lib\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Content\lib\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\lib\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Partners.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -16,7 +16,8 @@ namespace St
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
             container.RegisterType<ISiteConfigManager, SiteConfigManager>();
-            
+            container.RegisterType<IParnterManager, PartnerManager>();
+
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }
