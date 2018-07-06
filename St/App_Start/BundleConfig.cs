@@ -17,10 +17,14 @@ namespace St
             bundles.Add(new ScriptBundle("~/bundles/vue", "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"));
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include("~/Scripts/lib/jquery-validation/dist/jquery.validate.js", "~/Scripts/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"));
 
+            //bundles.Add(new StyleBundle("~/Content/libStyles").Include(
+            //          "~/Scripts/lib/tether/dist/css/tether.css",
+            //          "~/Scripts/lib/bootstrap/dist/css/bootstrap.css",
+            //          "~/Scripts/lib/font-awesome/css/font-awesome.min.css"));
+
             bundles.Add(new StyleBundle("~/Content/libStyles").Include(
-                      "~/Scripts/lib/tether/dist/css/tether.css",
-                      "~/Scripts/lib/bootstrap/dist/css/bootstrap.css",
-                      "~/Scripts/lib/font-awesome/css/font-awesome.min.css"));
+              "~/Scripts/lib/tether/dist/css/tether.css",
+              "~/Scripts/lib/bootstrap/dist/css/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/styles").Include(
                       "~/Content/points.css",

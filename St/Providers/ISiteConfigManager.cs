@@ -11,11 +11,11 @@ namespace St.Providers
     {
         SiteConfig GetSiteConfig();
         Task UpdateSiteConfig(SiteConfig config);
-        //Task AddSocialNetworkAsync(SocialNetworkItem item);
-        //Task UpdateSocialNetworkAsync(SocialNetworkItem item);
-        //Task RemoveSocialNetworkAsync(SocialNetworkItem item);
-        //IList<SocialNetworkItem> GetSocialNetworkByType(string type);
-        //Task<SocialNetworkItem> GetSocialNetworkByIdAsync(string id);
+        void AddSocialNetwork(SocialNetworkItem item);
+        Task UpdateSocialNetworkAsync(SocialNetworkItem item);
+        Task RemoveSocialNetworkAsync(SocialNetworkItem item);
+        IList<SocialNetworkItem> GetSocialNetworkByType(string type);
+        Task<SocialNetworkItem> GetSocialNetworkByIdAsync(string id);
         Task UpdatePageDataAsync(PageData item);
         PageData GetPageDataByName(string id);
         IList<PageData> GetAllPageDataItems();

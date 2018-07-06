@@ -1,4 +1,5 @@
-﻿using St.Providers;
+﻿using St.Models.Custom;
+using St.Providers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,8 +48,11 @@ namespace St.Controllers
 
         public ActionResult Footer()
         {
-            var siteConfigItem = _siteConfigManager.GetSiteConfig();
-            return PartialView("~/Views/Shared/_Footer.cshtml", siteConfigItem);
+            FooterViewModel model = new FooterViewModel();
+            model.SiteConfig = _siteConfigManager.GetSiteConfig();
+            model.SocialNetwors = _siteConfigManager.GetSocialNetworkByType("share");
+
+            return PartialView("~/Views/Shared/_Footer.cshtml", model);
         }
     }
 }
