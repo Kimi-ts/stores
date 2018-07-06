@@ -1,0 +1,65 @@
+﻿@model St.Models.Custom.SiteConfig
+
+<footer id="footer" class="footer bg-dark">
+    <div class="points d-none d-md-block">
+        <div class="point point-floating-1"></div>
+        <div class="point point-floating-2"></div>
+        <div class="point point-floating-3"></div>
+        <div class="point point-floating-4"></div>
+        <div class="point point-floating-5"></div>
+        <div class="point point-floating-6"></div>
+        <div class="point point-floating-7"></div>
+        <div class="point point-floating-8"></div>
+        <div class="point point-floating-9"></div>
+    </div>
+    <div class="container overflow-points-container">
+        <div class="row fill-40-viewport py-5 text-white-70 align-items-top">
+            <div class="col-6 col-md-4">
+                <ul class="list-unstyled">
+                    <li><h6 class="text-white">@Model.Name</h6></li>
+                    <li><p class="mb-0">@Model.OfficialLicence</p></li>
+                    <li><p class="mb-0">@Model.OfficialInfo</p></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2">
+                <ul class="list-unstyled">
+                    <li class="text-white">
+                        @*@{foreach (var item in socialNetworks)
+                            {
+                                <a class="text-white no-hover-underline" href="@item.Url" rel="noopener" target="_blank">
+                                    <i class="@item.IconClass" aria-hidden="true"></i>
+                                </a>
+                            }
+                        }*@
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled">
+                    <li><h6 class="text-white">Клиентам</h6></li>
+                    @{
+                        var phones = @Model.ClientPhones.Split(',');
+                    }
+                    @foreach (var phone in phones)
+                    {
+                        <li><p class="mb-0">@phone</p></li>
+                    }
+                    <li><p class="mb-0">@Model.WorkingDaysString с @Model.OpenHours до @Model.CloseHours</p></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <ul class="list-unstyled">
+                    <li><h6 class="text-white">Партнёрам</h6></li>
+                    @{
+                        var partnerPhones = Model.PartnerPhones.Split(',');
+                    }
+                    @foreach (var phone in partnerPhones)
+                    {
+                        <li><p class="mb-0">@phone</p></li>
+                    }
+                    <li><p class="mb-0">@Model.PartnerEmails</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

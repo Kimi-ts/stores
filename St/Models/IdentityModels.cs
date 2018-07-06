@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using St.Models.Custom;
 
 namespace St.Models
 {
@@ -18,7 +19,7 @@ namespace St.Models
         }
     }
 
-    //public class ApplicationRole: IdentityRole
+    //public class ApplicationRole : IdentityRole
     //{
 
     //}
@@ -34,5 +35,8 @@ namespace St.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<SiteConfig> SiteConfig { get; set; }
+        public DbSet<PageData> PageDataItems { get; set; }
     }
 }
